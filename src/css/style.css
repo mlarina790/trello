@@ -1,0 +1,231 @@
+* {
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+a {
+    color: #172b4d;
+    text-decoration: none;
+    cursor: inherit;
+}
+
+input,
+textarea {
+    font: inherit;
+    color: inherit;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Noto Sans, Ubuntu, Droid Sans, Helvetica Neue, sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #172b4d;
+    background-color: #d9dbdc;
+}
+
+.grabbing {
+    cursor: grabbing;
+}
+
+.hide {
+    display: none;
+}
+
+.board {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 8px;
+    margin-top: 100px;
+}
+
+.list-wrapper {
+    display: inline-block;
+    width: 272px;
+    min-width: 272px;
+    margin: 0 4px 0 4px;
+    vertical-align: top;
+}
+
+.list {
+    padding-left: 4px;
+    background-color: #ebecf0;
+    border-radius: 3px;
+}
+
+.list-header {
+    padding: 10px 8px 10px 8px;
+}
+
+.list-header-name {
+    padding: 4px 8px 4px 8px;
+    margin: -4px 0 -4px 0;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.list-cards {
+    padding: 8px 0 0 0;
+    margin: 0 4px 0 4px;
+    overflow-y: auto;
+}
+
+.list-card {
+    position: relative;
+    display: block;
+    width: 256px;
+    margin-bottom: 8px;
+    background-color: #ffffff;
+    box-shadow: 0 1px 0 #091e4240;
+    border-radius: 3px;
+}
+
+.list-card:last-child {
+    margin-bottom: 0;
+}
+
+.list-cards>.list-card.hover:hover {
+    background-color: #f4f5f7;
+
+    cursor: pointer;
+}
+
+.list-card-details {
+    padding: 6px 8px 2px 8px;
+}
+
+.list-card-title {
+    display: block;
+    margin: 0 0 4px 0;
+    color: #172b4d;
+    word-wrap: break-word;
+}
+
+.list-card-remover {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    display: none;
+    padding: 4px 4px 4px 4px;
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 1;
+    color: #42526e;
+    background-color: #ebecf0;
+    border-radius: 3px;
+    opacity: 0.8;
+}
+
+.list-card.hover:hover .list-card-remover {
+    display: block;
+}
+
+.list-card-remover.hover:hover {
+    color: #000000;
+    opacity: 1;
+}
+
+.list-card-remover::before {
+    content: '\2715';
+}
+
+.card-composer-textarea {
+    width: 100%;
+    height: 54px;
+    padding: 0;
+    margin-bottom: 4px;
+    background: none;
+    box-shadow: none;
+    border: none;
+    outline: none;
+    cursor: grabbing;
+    resize: none;
+    overflow-wrap: break-word;
+}
+
+.card-composer-textarea.hover:hover {
+    cursor: text;
+}
+
+.controls-section {
+    display: flex;
+    margin-bottom: 8px;
+}
+
+.new-card-button {
+    padding: 6px 12px 6px 12px;
+    margin-right: 10px;
+    color: white;
+    background-color: #0079bf;
+    border: none;
+    border-radius: 3px;
+    cursor: inherit;
+}
+
+.new-card-button.hover:hover {
+    background-color: #026aa7;
+    cursor: pointer;
+}
+
+.icon-close {
+    display: flex;
+    align-items: center;
+    font-weight: 800;
+    font-size: 18px;
+    color: #6b778c;
+    border: 0;
+    cursor: inherit;
+}
+
+.icon-close.hover:hover {
+    color: #000000;
+    cursor: pointer;
+}
+
+.icon-close::before {
+    content: '\2715';
+}
+
+.card-composer-container {
+    height: 38px;
+}
+
+.open-card-composer {
+    display: flex;
+    padding: 4px 8px 4px 11px;
+    margin: 2px 8px 8px 8px;
+    font: inherit;
+    color: #5e6c84;
+    border: 0;
+    border-radius: 3px;
+}
+
+.open-card-composer.hover:hover {
+    color: #172b4d;
+    background-color: #091e4214;
+    cursor: pointer;
+}
+
+.icon-add {
+    font-size: 23px;
+    color: #6b778c;
+}
+
+.icon-add::before {
+    content: '\002B';
+}
+
+.add-a-card {
+    margin-left: 7px;
+}
+
+.dragged {
+    position: absolute;
+    z-index: 999;
+    background: #ffffff;
+    pointer-events: none;
+}
+
+.transformed {
+    transform: rotate(5deg);
+}
